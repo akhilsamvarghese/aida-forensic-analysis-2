@@ -13,7 +13,7 @@ const App: React.FC = () => {
   const [view, setView] = useState<ViewState>('landing');
 
   return (
-    <div className="h-screen w-full bg-bg flex flex-col font-sans selection:bg-black selection:text-white overflow-hidden">
+    <div className="h-screen w-full bg-bg flex flex-col font-sans selection:bg-black selection:text-white overflow-y-auto">
       {/* Antigravity Background */}
       {/* <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
         <Antigravity
