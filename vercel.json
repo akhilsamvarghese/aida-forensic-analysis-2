@@ -1,11 +1,11 @@
 {
     "rewrites": [
         {
-            "source": "/upload/",
-            "destination": "http://167.71.237.172:5006/upload/"
+            "source": "/api/px4-upload",
+            "destination": "http://167.71.237.172:5006/upload"
         },
         {
-            "source": "/plot_app/:path*",
+            "source": "/api/plot_app/:path*",
             "destination": "http://167.71.237.172:5006/plot_app/:path*"
         }
     ]

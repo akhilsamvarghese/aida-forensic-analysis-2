@@ -102,8 +102,8 @@ const PlatformSection: React.FC<PlatformSectionProps> = ({ onSelect }) => {
         formData.append('redirect', 'false');
 
         const xhr = new XMLHttpRequest();
-        // Call the PX4 backend directly with the full URL
-        xhr.open('POST', 'http://167.71.237.172:5006/upload');
+        // Use Vercel rewrite proxy to avoid CORS issues
+        xhr.open('POST', '/api/px4-upload');
 
         xhr.upload.onprogress = (event) => {
           if (event.lengthComputable) {
