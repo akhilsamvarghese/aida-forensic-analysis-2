@@ -102,10 +102,8 @@ const PlatformSection: React.FC<PlatformSectionProps> = ({ onSelect }) => {
         formData.append('redirect', 'false');
 
         const xhr = new XMLHttpRequest();
-        // Upload endpoint for PX4 flight review is typically just /upload or the root / if handled by UploadHandler
-        // Based on the provided file, UploadHandler seems to be mapped to /upload in serve.py (implied) or similar.
-        // However, standard PX4 Flight Review upload is often at /upload
-        xhr.open('POST', '/upload/');
+        // Call the PX4 backend directly with the full URL
+        xhr.open('POST', 'http://167.71.237.172:5006/upload');
 
         xhr.upload.onprogress = (event) => {
           if (event.lengthComputable) {
