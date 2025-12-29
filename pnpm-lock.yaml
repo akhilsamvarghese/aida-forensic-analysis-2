@@ -14,6 +14,15 @@ importers:
       '@types/three':
         specifier: ^0.182.0
         version: 0.182.0
+      aes-cmac:
+        specifier: ^4.0.0
+        version: 4.0.0
+      aes-js:
+        specifier: ^3.1.2
+        version: 3.1.2
+      fflate:
+        specifier: ^0.8.2
+        version: 0.8.2
       lucide-react:
         specifier: ^0.561.0
         version: 0.561.0(react@19.2.3)
@@ -493,6 +502,13 @@ packages:
 
   '@webgpu/types@0.1.68':
     resolution: {integrity: sha512-3ab1B59Ojb6RwjOspYLsTpCzbNB3ZaamIAxBMmvnNkiDoLTZUOBXZ9p5nAYVEkQlDdf6qAZWi1pqj9+ypiqznA==}
+
+  aes-cmac@4.0.0:
+    resolution: {integrity: sha512-HhYx38lyXTYYVR7WdgN9LRdls63t3RXAUDUUpKrEVgyOTiqVanc1FBxh7Mncuu7Q1VyNU+HRSZHdAYefBL7Hcg==}
+    engines: {node: '>=20.19.2'}
+
+  aes-js@3.1.2:
+    resolution: {integrity: sha512-e5pEa2kBnBOgR4Y/p20pskXI74UEz7de8ZGVo58asOtvSVG5YAbJeELPZxOmt+Bnz3rX753YKhfIn4X4l1PPRQ==}
 
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
@@ -1126,6 +1142,10 @@ snapshots:
       - supports-color
 
   '@webgpu/types@0.1.68': {}
+
+  aes-cmac@4.0.0: {}
+
+  aes-js@3.1.2: {}
 
   base64-js@1.5.1: {}
 

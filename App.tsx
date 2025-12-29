@@ -28,12 +28,12 @@ const App: React.FC = () => {
       </div>
 
       {/* Content Layer */}
-      <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
+      <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', minHeight: '100%' }}>
         <Header onNavigate={() => setView('landing')} />
 
-        <main className="flex-grow relative w-full h-full flex flex-col">
+        <main className="flex-grow relative w-full min-h-full flex flex-col">
           {view === 'landing' ? (
-            <div className="flex-1 flex flex-col h-full w-full max-w-[1600px] mx-auto px-6 lg:px-12 py-6">
+            <div className="flex-1 flex flex-col min-h-full w-full max-w-[1600px] mx-auto px-6 lg:px-12 py-6">
 
               {/* Top: Hero Text - Pushes down */}
               {/* Top: Hero Text - Pushes down */}
@@ -42,7 +42,7 @@ const App: React.FC = () => {
               </div>
 
               {/* Middle: Cards - Centered vertically in available space */}
-              <div className="flex-1 flex items-start justify-center min-h-0 pt-4">
+              <div className="flex-1 flex items-start justify-center pt-4">
                 <PlatformSection onSelect={(platform) => {
                   if (platform === 'DJI') {
                     window.open('https://aida-dat-decrypter.vercel.app/', '_blank');
@@ -57,7 +57,7 @@ const App: React.FC = () => {
               <div className="flex-none mt-8 pb-4 md:pb-2">
                 <PrivacySection />
 
-                <div className="flex justify-between items-center text-[10px] md:text-xs text-subtle uppercase tracking-wider mt-6 pt-4 border-t border-border">
+                <div className="flex justify-between items-center text-[10px] md:text-xs text-subtle uppercase tracking-wider mt-6 pt-4 border-t border-border mb-8">
                   <span>&copy; {new Date().getFullYear()} AiDA Forensic</span>
                   <span className="opacity-60">v1.0.4 (Beta) &mdash; Local Environment</span>
                 </div>
