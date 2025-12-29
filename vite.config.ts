@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => {
           target: 'http://167.71.237.172:5006',
           changeOrigin: true,
           secure: false,
+          rewrite: (path: string) => path.replace(/^\/upload/, '')
         },
         '/plot_app': {
           target: 'http://167.71.237.172:5006',
